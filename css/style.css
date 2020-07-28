@@ -46,10 +46,12 @@ h1 {
 /*Разметка Хедера*/
 .header {
   display: flex;
+  height: 81px;
 }
 .navigation-container {
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 .navigation-list {
   display: flex;
@@ -78,14 +80,27 @@ h1 {
   margin-right: 50px;
 }
 
-.studio::after {
+.underline::after {
   display: block;
+  position: absolute;
+  content: "";
   background-color: var(--accent-color);
   width: 47px;
   height: 4px;
   border-radius: 2px;
-  content: "";
+  margin-top: 28px;
 }
+.underline-port::after {
+  display: block;
+  position: absolute;
+  content: "";
+  background-color: var(--accent-color);
+  width: 77px;
+  height: 4px;
+  border-radius: 2px;
+  margin-top: 28px;
+}
+
 .header .container {
   display: flex;
   align-items: center;
@@ -121,7 +136,8 @@ h1 {
   color: var(--accent-color);
   fill: #2196f3;
 }
-.icon-header:hover {
+.icon-header:hover,
+.icon-header:focus {
   fill: var(--accent-color);
 }
 .address > a:not(:last-child) {
@@ -175,7 +191,9 @@ h1 {
 }
 
 /* ховер на кнопке-герое */
-.button:hover {
+.button:hover,
+.button:focus {
+  border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
@@ -406,7 +424,6 @@ h1 {
   color: var(--white-color);
   margin-bottom: 20px;
 }
-
 .button-send::after {
   display: inline-flex;
   content: "";
@@ -430,11 +447,15 @@ h1 {
 .filter > li:not(:last-child) {
   margin-right: 8px;
 }
+
 /*Ховер для фильтра страници портфолио*/
 .filter-active:hover,
 .filter-active:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 .filter-active {
   width: 128px;
@@ -459,10 +480,12 @@ h1 {
 .galery > li {
   margin-bottom: 30px;
   box-sizing: border-box;
+}
+.galery > li:hover,
+.galery > li:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
-
 /* 3n
     1)3*0=0
     2)3*1=3
@@ -497,6 +520,9 @@ h1 {
   padding-right: 24px;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
 }
 .portfolio {
   color: var(--accent-color);
