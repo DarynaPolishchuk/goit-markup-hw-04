@@ -427,6 +427,8 @@ h1 {
 .button-send::after {
   display: inline-flex;
   content: "";
+  margin-left: 10px;
+  position: relative;
   width: 24px;
   height: 24px;
   justify-content: center;
